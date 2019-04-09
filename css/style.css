@@ -1,0 +1,167 @@
+body{
+    padding:0;
+    margin:0 auto;
+    box-sizing:border-box;
+    background:#282B40;
+}
+
+#wrapper{
+    max-width:1920px;
+    margin:0 auto;
+}
+
+#music-console{
+    display:flex;
+    justify-content:center;
+}
+
+.buttons{
+    height:200px;
+    width:200px;
+    margin:0 auto;
+    margin:10px;
+    background-color:#ffaa00;
+    border:10px solid #FFCC00;
+    box-sizing:border-box;
+    box-shadow: 0 0px 30px 0 rgba(255,170,0,0.4),
+    0 0px 5px 0 rgba(255,170,0,0.08);
+    transition:all 0.1s ease;
+}
+
+#tip{
+    position:absolute;
+    width:100%;
+    text-align:center;
+    bottom:50px;
+    color:white;
+    left:0;
+    right:0;
+    margin:0 auto;
+    animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce{
+    0%{
+     bottom:50px;
+    }
+    50%{
+        bottom:52px;
+        color:orange;
+    }
+}
+
+
+
+.buttons p{
+    text-align:center;
+    position:relative;
+    font-size:2em;
+    top:30%;
+    transform:translate(0%,-30%);
+    opacity:0.5;
+}
+
+.activated{
+    background:#FFCC00;
+    box-shadow: 0 0px 30px 0 #ffaa00
+    0 0px 5px 0 #ffaa00;
+    color:white;
+}
+
+#music-wrapper{
+    justify-content:center;
+    display:flex;
+    position:absolute;
+    top:11%;
+    transform:translate(0, -11%);
+    flex-direction:column;
+    max-width:660px;
+    margin:0 auto;
+    background: rgb(66, 70, 102);
+    border:2px solid transparent;
+    box-shadow:0px 2px 10px black;
+    border-style:groove;
+}
+
+#launchButtons{
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+}
+
+
+#musicSelector{
+    display:absolute;
+    position:fixed;
+    left:0;
+    right:0;
+    margin:0 auto;
+    bottom:0;
+    width:315px;
+    height:50px;
+    background:#282B40;
+    border:5px solid #ffaa00;
+    border-bottom:0;
+    box-sizing:border-box;
+}
+
+#musicSelector #grid{
+    display:flex;
+    
+}
+
+#musicSelector #grid div{
+    padding:5px;
+    color:white;
+    width:50%;
+}
+
+#musicSelector #grid #screen{
+    padding:3px;
+    text-align:center;
+}
+
+
+#musicSelector #grid #buttons{
+    margin:0 auto;
+    text-align:right;
+}
+
+#musicSelector #buttons button{
+    border-color:rgb(255, 204, 0);
+    border-style:ridge;
+    padding:8px;
+    color:white;
+    background:rgb(255, 204, 0, 0.3);
+}
+
+#musicSelector #buttons button:hover{
+    background:rgb(255, 204, 0);
+    border-style:outset;
+}
+
+#musicSelector #buttons button:active{
+    background:rgb(255, 204, 0);
+    border-style:ridge;
+}
+
+@media (max-width:767px){
+    .buttons{
+        height:75px;
+        width:75px;
+        margin:0 auto;
+        margin:10px;
+        border-width:5px;
+    }
+
+    .buttons p{
+        transform:translate(0%,-100%);
+    }
+
+    #music-wrapper{
+        max-width:285px;
+        position:absolute;
+        top:50%;
+        transform:translate(0%, -50%);
+    }
+}
